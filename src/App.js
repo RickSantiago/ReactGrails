@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './components/Input.js'
+import { Usuario } from './helpers'
 
 class App extends Component {
   state = {
@@ -10,22 +11,10 @@ class App extends Component {
 
   onSubmit = (event) => {
     event.preventDefault()
-    
+
     let { idade, nome, cpf } = this.state
 
-    fetch( 'API_URL', {
-      headers: {
-        "content-type": "application/json"
-      },
-      method: 'POST',
-      body: JSON.stringify(
-        {
-          nome: nome,
-          idade: idade,
-          cpf: cpf
-        }
-      )
-    })
+    Usuario.criar({ idade, nome, cpf })
     .then(response => console.log(response))
     .catch(erro => console.log(erro))
   }
