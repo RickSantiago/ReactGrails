@@ -1,4 +1,4 @@
-const API_URL = 'http://www.suaapifodona.com/api'
+const API_URL = 'http://localhost:9999/pessoa/'
 
 const Usuario = {
   criar: args => {
