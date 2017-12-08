@@ -5,7 +5,7 @@ const Usuario = {
     return fetch( API_URL, {
       headers: new Headers ({
         "content-type": "application/json",
-        "cache-control": "no-cache"
+        "Accept": "application/json"
       }),
       method: 'POST',
       body: JSON.stringify(
