@@ -7,6 +7,7 @@ const Usuario = {
         "content-type": "application/json"
       },
       method: 'POST',
+      mode: 'cors',
       body: JSON.stringify(
         {
           nome: args.nome,
