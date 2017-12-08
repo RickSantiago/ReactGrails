@@ -3,9 +3,10 @@ const API_URL = 'http://www.suaapifodona.com/api'
 const Usuario = {
   criar: args => {
     return fetch( API_URL, {
-      headers: {
-        "content-type": "application/json"
-      },
+      headers: new Headers ({
+        "content-type": "application/json",
+        "cache-control": "no-cache"
+      }),
       method: 'POST',
       body: JSON.stringify(
         {
